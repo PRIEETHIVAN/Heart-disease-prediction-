@@ -120,16 +120,6 @@ The best-performing model was selected and saved as:
 - Gunicorn (Production Server)  
 - Render / Railway compatible  
 
----
-
-
-This project can be deployed on:
-
-- Render  
-- Railway  
-- PythonAnywhere  
-
-(Add your live deployed link here after deployment.)
 
 ---
 
