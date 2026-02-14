@@ -1,64 +1,258 @@
-## Heart Disease Prediction using Machine Learning
+❤️ Heart Disease Prediction using Machine Learning
+End-to-End ML + Flask Deployment Project
+🚀 Project Overview
 
-According to World Health Organization statistics, cardiovascular disease is the leading cause of death in the world. CVDs were responsible for 32% of all global deaths in 2019, as estimated by the World Health Organization. Heart attacks and strokes were responsible for 85% of these deaths. Low- and middle-income countries account for more than three quarters of all CVD deaths.
+This project is an end-to-end Machine Learning web application that predicts the likelihood of heart disease based on clinical health parameters.
 
-We have created a web application and a prediction model based on machine learning using which a patient can fill in basic details like age, gender, Chest Pain Types, Cholesterol Level, etc. Based on these data, the model is able to predict heart disease. We have used various machine learning algorithms like Logistic Regression, Support Vector Machine, Decision Tree, Random Forest, and KNN for prediction.User is also able to print the report for tracking the disease.
+It demonstrates the complete ML lifecycle:
 
-## Installation of required software and Libraries
-1. Install the Anaconda Python Package
-2. Open Anaconda Prompt and Move to the downloaded project directory (Heart Disease Prediction) using the cd command
+Data preprocessing
 
-	Example:
-	>> cd Path_of_Project_Directory
-	
-3. Create the virtual environment using the below command
-	>>conda create -n hdp python==3.11.7
-4. Activate the virtual environment using the command
-	>>conda activate hdp
-5. Now install the required Libraries using the below command
-	>>pip install -r requirements.txt
+Exploratory Data Analysis
+
+Model training & evaluation
+
+Model selection
+
+Model serialization
+
+Web integration using Flask
+
+Deployment-ready architecture
+
+The system allows users to input medical features and receive an instant prediction through a web interface.
+
+🎯 Objective
+
+Heart disease is one of the leading causes of mortality worldwide. Early prediction using machine learning can assist healthcare professionals in preventive diagnosis and decision-making.
+
+This project builds a binary classification model to predict:
+
+1 → Heart Disease Present
+
+0 → No Heart Disease
+
+📊 Dataset Details
+
+The dataset contains structured patient health records with features such as:
+
+Age
+
+Sex
+
+Chest Pain Type
+
+Resting Blood Pressure
+
+Cholesterol
+
+Fasting Blood Sugar
+
+Resting ECG Results
+
+Maximum Heart Rate Achieved
+
+Exercise-Induced Angina
+
+ST Depression
+
+Slope of Peak Exercise ST Segment
+
+Number of Major Vessels
+
+Thalassemia
+
+The target variable indicates the presence of heart disease.
+
+🧠 Machine Learning Pipeline
+1️⃣ Data Preprocessing
+
+Handling missing values
+
+Feature selection
+
+Encoding categorical variables (if applicable)
+
+Feature scaling (where required)
+
+2️⃣ Model Training
+
+Multiple algorithms were implemented and compared:
+
+Logistic Regression
+
+Support Vector Machine (SVM)
+
+Decision Tree
+
+Random Forest
+
+K-Nearest Neighbors (KNN)
+
+3️⃣ Model Evaluation
+
+Models were evaluated using:
+
+Accuracy Score
+
+Confusion Matrix
+
+Precision & Recall
+
+Cross-validation
+
+The best-performing model was selected and serialized using Pickle.
+
+models.pkl
+
+🏗️ System Architecture
+User Input (Web Form)
+        ↓
+Flask Backend (app.py)
+        ↓
+Load Trained Model (models.pkl)
+        ↓
+Prediction
+        ↓
+Display Result
 
 
-## Steps to train the model after Installation of required software and Libraries
-1. Open Anaconda Prompt and Move to the downloaded project directory (Heart Disease Prediction) using the cd command
+The Flask application acts as an inference layer between user input and the ML model.
 
-	Example:
-	>> cd Path_of_Project_Directory
-	
-2. Activate the virtual environment using the command
-	>>conda activate hdp
-	
-	Note: hdp is the environment created at the time of installing the software and Libraries
-	
-3. Next to train the model open the Jupyter Notebook using the below command
-	>>jupyter notebook
-4. Open the Heart-Disease-Prediction.ipynb and run all cells
-5. Once the training is completed the trained model models.pkl will be stored in the current working directory
+🖥️ Web Application Features
+
+Clean and structured input form
+
+Real-time prediction output
+
+Modular Flask backend
+
+Organized static and template folders
+
+Deployment-ready configuration
+
+🛠️ Tech Stack
+🔹 Machine Learning
+
+Python
+
+Scikit-learn
+
+Pandas
+
+NumPy
+
+🔹 Backend
+
+Flask
+
+🔹 Frontend
+
+HTML
+
+CSS
+
+🔹 Model Deployment
+
+Pickle
+
+Gunicorn (for production server)
+
+Render / Railway compatible
+
+📂 Project Structure
+Heart-Disease-Prediction/
+│
+├── app.py
+├── Heart-Disease-Prediction.ipynb
+├── models.pkl
+├── requirements.txt
+├── README.md
+│
+├── templates/
+│   ├── index.html
+│   └── result.html
+│
+├── static/
+│   ├── style.css
+│   └── result.css
+│
+└── dataset/
+
+🚀 Running the Project Locally
+Step 1: Clone Repository
+git clone https://github.com/your-username/Heart-disease-prediction-
+cd Heart-disease-prediction-
+
+Step 2: Install Dependencies
+pip install -r requirements.txt
+
+Step 3: Run Application
+python app.py
 
 
-## Steps to run the Flask App after training the model 
-1. Open Anaconda Prompt and Move to the downloaded project directory (Heart Disease Prediction) using the cd command
+Open in browser:
 
-	Example:
-	>> cd Path_of_Project_Directory
-	
-2. Activate the virtual environment using the command
-	>>conda activate hdp
-	
-	Note: hdp is the environment created at the time of installing the software and Libraries
-	
-3. Run the Flask App using the below command
-	>>python app.py
-	
-	
-## Tech Stack
+http://127.0.0.1:5000/
 
-**Language:** Python,Javascript,CSS,HTML
-**Algorithms:** Logistic Regression,SVM,Decision Tree,Random Forest,KNN
-**Framework:** Flask
-**Tools:** VSCode,jupyter notebook
-**Libraries:** NumPy,Pandas,Matplotlib
+🌍 Deployment
 
-Happy Learning
+The application can be deployed using:
 
-Team VTUPulse.com
+Render
+
+Railway
+
+PythonAnywhere
+
+Production server example:
+
+gunicorn app:app
+
+📈 Key Highlights for Recruiters
+
+End-to-end ML pipeline implementation
+
+Multiple model comparison & evaluation
+
+Model persistence using Pickle
+
+Flask integration with trained ML model
+
+Clean project structuring
+
+Deployment-ready web application
+
+Demonstrates applied Machine Learning in healthcare domain
+
+🧩 Future Enhancements
+
+Add feature importance visualization
+
+Add SHAP explainability
+
+Add REST API endpoints
+
+Add model retraining pipeline
+
+Docker containerization
+
+CI/CD integration
+
+📌 Learning Outcomes
+
+Through this project, I gained hands-on experience in:
+
+Applied supervised learning
+
+Model evaluation & selection
+
+Backend integration with ML
+
+Web deployment strategies
+
+Real-world healthcare prediction systems
+
+📄 License
+
+This project is built for educational and research purposes.
